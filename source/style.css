@@ -1,0 +1,118 @@
+*, *:before, *:after {
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: "montserrat";
+    background-color: #f4f4f4;
+}
+.menu {
+    background-color: rgb(17, 17, 63);
+    height: 75px;
+    width: 100vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #fff;
+    box-shadow: 3px 0 5px #bc9a36;
+}
+
+.img_logo {
+    vertical-align: middle;
+    padding: 0px 60px;
+    width: 50%;
+    height: 50%;
+}
+
+.menu_items {
+    display: flex;
+    list-style: none;
+    margin-right: 30px;
+}
+
+.menu_items li {
+    border-radius: 0px;
+    margin: 0 20px;
+}
+
+.menu_items li a {
+    padding: 10px 20px;
+    text-decoration: none;
+    font-size: 18px;
+    display: block;
+    text-transform: uppercase;
+    color: #bc9a36;
+}
+
+.menu_items li:hover {
+    background-color: #343a40;
+    transition: .3s;
+}
+
+.active {
+    background-color: rgb(29, 29, 112);
+    transition: .3s;
+}
+
+.btn_menu {
+    margin-right: 30px;
+    font-size: 25px;
+    color: #fff;
+    cursor: pointer;
+    display: none;
+}
+
+ul.mostrar {
+    top: 65px;
+}
+
+@media screen and (max-width: 952px) {
+    .logo {
+        font-size: 30px;
+        padding-left: 35px;
+    }
+    .menu_items li a {
+        font-size: 16px;
+    }
+}
+
+@media screen and (max-width: 858px) {
+    .menu {
+        height: 70px;
+    }
+    .btn_menu {
+        display: inline-flex;
+    }
+    .menu_items {
+        position: fixed;
+        width: 100vw;
+        height: calc(100% - 65px);
+        opacity: 70%;
+        background:  rgb(24, 24, 51);
+        top: -100vh;
+        text-align: center;
+        transition: all 0.4s;
+        flex-direction: column;
+    }
+    .menu_items li {
+        margin: 30px 0 0 0;
+        line-height: 30px;
+    }
+    .menu_items li:hover {
+        background: none;
+    }
+    .menu_items li a {
+        font-size: 20px;
+        color: #fff;
+        font-weight: bold;
+    }
+    .menu_items li a:hover {
+        color: #bc9a36;
+    }
+    .logo {
+        font-size: 25px;
+        text-align: center;
+    }
+}
